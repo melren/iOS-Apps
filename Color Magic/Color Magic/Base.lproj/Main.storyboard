@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCM-ZZ-Pop">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Color Magic-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ColorPresenterVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gray is boring. Choose a color." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-Zc-Yb9">
+                                <rect key="frame" x="87" y="317" width="200" height="70"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fIW-Zc-Yb9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fql-mo-fpo"/>
+                            <constraint firstItem="fIW-Zc-Yb9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gZ1-QY-iEP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Color Magic" id="cnL-63-lOb">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="apW-m5-LNI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hu9-bF-ZXv">
+                            <connections>
+                                <segue destination="iCj-XE-L0w" kind="show" id="1Ll-le-5Xl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="colorNameLbl" destination="fIW-Zc-Yb9" id="PZ9-9b-CV7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Color PickerVC-->
+        <scene sceneID="ZPO-VW-YMV">
+            <objects>
+                <viewController id="iCj-XE-L0w" customClass="ColorPickerVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hxg-DL-HnO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-L4-efr">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewN-99-Yzu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                        <color key="backgroundColor" red="0.98451727628707886" green="0.76256018877029419" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Pink">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="iCj-XE-L0w" eventType="touchUpInside" id="CUo-W6-Nzs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-fg-OKI">
+                                        <rect key="frame" x="0.0" y="100.5" width="375" height="100.5"/>
+                                        <color key="backgroundColor" red="0.84088134765625" green="0.72691291570663452" blue="0.99995487928390503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Purple">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="iCj-XE-L0w" eventType="touchUpInside" id="NVp-kf-HPn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-um-J34">
+                                        <rect key="frame" x="0.0" y="201" width="375" height="100.5"/>
+                                        <color key="backgroundColor" red="0.32878598570823669" green="0.7809557318687439" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Blue">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="iCj-XE-L0w" eventType="touchUpInside" id="hbS-2g-fXn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkR-GI-jWd">
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="100.5"/>
+                                        <color key="backgroundColor" red="0.32878598570823669" green="0.7809557318687439" blue="0.56684027777777779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Green">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="iCj-XE-L0w" eventType="touchUpInside" id="Gco-FK-A0b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9G-G4-xUS">
+                                        <rect key="frame" x="0.0" y="402" width="375" height="100.5"/>
+                                        <color key="backgroundColor" red="0.91499761004133273" green="0.68905956676879376" blue="0.32410051419648561" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Orange">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="iCj-XE-L0w" eventType="touchUpInside" id="Bcy-WK-wfh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l6-qG-tat">
+                                        <rect key="frame" x="0.0" y="502.5" width="375" height="100.5"/>
+                                        <color key="backgroundColor" red="0.91499761004133273" green="0.32326654655441867" blue="0.298899283182464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="colorBtnWasPressedWithSender:" destination="iCj-XE-L0w" eventType="touchUpInside" id="Cu8-6R-zs8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.69019607839999997" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="j9G-G4-xUS" secondAttribute="trailing" id="20g-lm-XeS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ewN-99-Yzu" secondAttribute="trailing" id="4TF-sb-6nB"/>
+                                    <constraint firstItem="j9G-G4-xUS" firstAttribute="leading" secondItem="d2R-L4-efr" secondAttribute="leading" id="DVc-Dn-Ikb"/>
+                                    <constraint firstItem="ibQ-um-J34" firstAttribute="leading" secondItem="d2R-L4-efr" secondAttribute="leading" id="F7F-n6-Sz1"/>
+                                    <constraint firstAttribute="trailing" secondItem="qkR-GI-jWd" secondAttribute="trailing" id="I8v-ys-9jv"/>
+                                    <constraint firstItem="ewN-99-Yzu" firstAttribute="leading" secondItem="d2R-L4-efr" secondAttribute="leading" id="TLD-Zu-uLX"/>
+                                    <constraint firstAttribute="trailing" secondItem="hWr-fg-OKI" secondAttribute="trailing" id="UTj-yl-PuX"/>
+                                    <constraint firstAttribute="trailing" secondItem="7l6-qG-tat" secondAttribute="trailing" id="ZBp-da-592"/>
+                                    <constraint firstItem="hWr-fg-OKI" firstAttribute="leading" secondItem="d2R-L4-efr" secondAttribute="leading" id="fHn-2v-AHr"/>
+                                    <constraint firstItem="qkR-GI-jWd" firstAttribute="leading" secondItem="d2R-L4-efr" secondAttribute="leading" id="kOO-1B-sX4"/>
+                                    <constraint firstItem="7l6-qG-tat" firstAttribute="leading" secondItem="d2R-L4-efr" secondAttribute="leading" id="mQL-lO-4JS"/>
+                                    <constraint firstAttribute="trailing" secondItem="ibQ-um-J34" secondAttribute="trailing" id="w8e-Ci-oXa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Yv-rQ-jgY" firstAttribute="bottom" secondItem="d2R-L4-efr" secondAttribute="bottom" id="2nv-CB-KG4"/>
+                            <constraint firstItem="d2R-L4-efr" firstAttribute="leading" secondItem="8Yv-rQ-jgY" secondAttribute="leading" id="LNk-n9-bnD"/>
+                            <constraint firstItem="d2R-L4-efr" firstAttribute="top" secondItem="8Yv-rQ-jgY" secondAttribute="top" id="b4l-EY-iWW"/>
+                            <constraint firstItem="8Yv-rQ-jgY" firstAttribute="trailing" secondItem="d2R-L4-efr" secondAttribute="trailing" id="dBI-Le-LZx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Yv-rQ-jgY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hyg-tG-zcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JI0-Tg-78N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yCM-ZZ-Pop" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bUR-XI-Kn1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bbL-ff-9Yn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OdF-jO-ErH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="118"/>
+        </scene>
+    </scenes>
+</document>
