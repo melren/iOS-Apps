@@ -119,18 +119,27 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80139661815068497" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Mens"/>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="ywv-aR-vIG" eventType="touchUpInside" id="a1K-9I-vu7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TaA-TS-MME" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="47" width="280" height="37"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Womens"/>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="ywv-aR-vIG" eventType="touchUpInside" id="IGE-5u-uek"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="484-ke-ON6" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="94" width="280" height="37"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Co-ed"/>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="ywv-aR-vIG" eventType="touchUpInside" id="OTz-H0-PKh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -142,11 +151,14 @@
                                     <constraint firstAttribute="trailing" secondItem="484-ke-ON6" secondAttribute="trailing" id="xmI-GK-fJL"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTD-UW-OvS" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTD-UW-OvS" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="423" width="280" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="ywv-aR-vIG" eventType="touchUpInside" id="BiF-sA-OWc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xa-xD-pdE">
                                 <rect key="frame" x="20" y="40" width="22" height="19"/>
@@ -183,6 +195,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dpp-5v-VjE"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="hTD-UW-OvS" id="fDT-Q3-mTr"/>
+                        <segue destination="ce7-cI-UUC" kind="show" identifier="skillVCSegue" id="eAt-U2-YGj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YFS-TV-cI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="p9T-sd-njl" userLabel="Exit" sceneMemberID="exit"/>
