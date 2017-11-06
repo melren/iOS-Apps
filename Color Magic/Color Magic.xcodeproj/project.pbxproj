@@ -13,6 +13,7 @@
 		B80E9A911F9AA08B009CB2E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B80E9A901F9AA08B009CB2E9 /* Assets.xcassets */; };
 		B80E9A941F9AA08B009CB2E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B80E9A921F9AA08B009CB2E9 /* LaunchScreen.storyboard */; };
 		B80E9A9C1F9AB46B009CB2E9 /* ColorPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80E9A9B1F9AB46B009CB2E9 /* ColorPickerVC.swift */; };
+		B81853E41FB008EF00C41381 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81853E31FB008EF00C41381 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B80E9A931F9AA08B009CB2E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B80E9A951F9AA08B009CB2E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B80E9A9B1F9AB46B009CB2E9 /* ColorPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerVC.swift; sourceTree = "<group>"; };
+		B81853E31FB008EF00C41381 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		B80E9A881F9AA08B009CB2E9 /* Color Magic */ = {
 			isa = PBXGroup;
 			children = (
+				B81853E21FB006E900C41381 /* Controller */,
+				B81853E11FB006DF00C41381 /* Model */,
 				B80E9A891F9AA08B009CB2E9 /* AppDelegate.swift */,
-				B80E9A8B1F9AA08B009CB2E9 /* ColorPresenterVC.swift */,
 				B80E9A8D1F9AA08B009CB2E9 /* Main.storyboard */,
 				B80E9A901F9AA08B009CB2E9 /* Assets.xcassets */,
 				B80E9A921F9AA08B009CB2E9 /* LaunchScreen.storyboard */,
 				B80E9A951F9AA08B009CB2E9 /* Info.plist */,
-				B80E9A9B1F9AB46B009CB2E9 /* ColorPickerVC.swift */,
 			);
 			path = "Color Magic";
+			sourceTree = "<group>";
+		};
+		B81853E11FB006DF00C41381 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B81853E31FB008EF00C41381 /* Color.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B81853E21FB006E900C41381 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B80E9A8B1F9AA08B009CB2E9 /* ColorPresenterVC.swift */,
+				B80E9A9B1F9AB46B009CB2E9 /* ColorPickerVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B80E9A8C1F9AA08B009CB2E9 /* ColorPresenterVC.swift in Sources */,
+				B81853E41FB008EF00C41381 /* Color.swift in Sources */,
 				B80E9A8A1F9AA08B009CB2E9 /* AppDelegate.swift in Sources */,
 				B80E9A9C1F9AB46B009CB2E9 /* ColorPickerVC.swift in Sources */,
 			);

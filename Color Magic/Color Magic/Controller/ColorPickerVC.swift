@@ -10,6 +10,8 @@ import UIKit
 
 class ColorPickerVC: UIViewController {
 
+    var color = ColorPicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +19,13 @@ class ColorPickerVC: UIViewController {
     }
 
     @IBAction func colorBtnWasPressed(sender: UIButton) {
-        print(sender.titleLabel?.text!)
+        color.background = sender.titleLabel?.text!
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let ColorPresenterVC = segue.destination as? ColorPresenterVC {
+            ColorPresenterVC.color = color
+        }
     }
 }
+
