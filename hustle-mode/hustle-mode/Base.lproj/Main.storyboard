@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,52 +20,74 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hustle_mode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkBlueBG" translatesAutoresizingMaskIntoConstraints="NO" id="H4z-UX-DMg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkBlueBG" translatesAutoresizingMaskIntoConstraints="NO" id="H4z-UX-DMg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azy-p4-mFO">
-                                <rect key="frame" x="112" y="285" width="150" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azy-p4-mFO">
+                                <rect key="frame" x="112" y="236" width="96" height="96"/>
                                 <state key="normal" image="powerButton"/>
                                 <connections>
                                     <action selector="powerBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aaj-Rz-7Ac"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTb-uH-Dub">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view hidden="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTb-uH-Dub">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rocketAndStream" translatesAutoresizingMaskIntoConstraints="NO" id="XgW-QQ-pXw">
-                                        <rect key="frame" x="0.0" y="415" width="375" height="281"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rocketAndStream" translatesAutoresizingMaskIntoConstraints="NO" id="XgW-QQ-pXw">
+                                        <rect key="frame" x="0.0" y="248" width="320" height="672"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloudsAndOrangeOval" translatesAutoresizingMaskIntoConstraints="NO" id="w3M-bb-RmW">
-                                        <rect key="frame" x="0.0" y="232" width="375" height="435"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloudsAndOrangeOval" translatesAutoresizingMaskIntoConstraints="NO" id="w3M-bb-RmW">
+                                        <rect key="frame" x="0.0" y="200" width="414" height="536"/>
                                     </imageView>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HUSTLE MODE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blZ-5o-YiT">
-                                        <rect key="frame" x="40" y="418" width="295" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUSTLE MODE:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blZ-5o-YiT">
+                                        <rect key="frame" x="12.5" y="370" width="295" height="53.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="39"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-P7-zo3">
-                                        <rect key="frame" x="112" y="488" width="151" height="96"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbk-P7-zo3">
+                                        <rect key="frame" x="106" y="408.5" width="108.5" height="90.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="66"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43133511769999999" green="0.80700265579999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="w3M-bb-RmW" secondAttribute="trailing" id="5eP-us-Gyf"/>
+                                    <constraint firstAttribute="trailing" secondItem="XgW-QQ-pXw" secondAttribute="trailing" id="6x5-pv-NKO"/>
+                                    <constraint firstItem="XgW-QQ-pXw" firstAttribute="leading" secondItem="cTb-uH-Dub" secondAttribute="leading" id="7bt-Y8-bjA"/>
+                                    <constraint firstItem="Kbk-P7-zo3" firstAttribute="top" secondItem="blZ-5o-YiT" secondAttribute="bottom" constant="-15" id="BPg-34-VEa"/>
+                                    <constraint firstItem="XgW-QQ-pXw" firstAttribute="centerX" secondItem="cTb-uH-Dub" secondAttribute="centerX" id="HP0-TN-j0Q"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="XgW-QQ-pXw" secondAttribute="bottom" constant="-360" id="IjL-2Y-Kd8"/>
+                                    <constraint firstItem="w3M-bb-RmW" firstAttribute="leading" secondItem="cTb-uH-Dub" secondAttribute="leading" id="Oph-9w-ifw"/>
+                                    <constraint firstItem="w3M-bb-RmW" firstAttribute="top" secondItem="cTb-uH-Dub" secondAttribute="top" constant="200" id="Q4R-KI-Zgi"/>
+                                    <constraint firstItem="XgW-QQ-pXw" firstAttribute="leading" secondItem="cTb-uH-Dub" secondAttribute="leading" id="RAV-gs-0Zx"/>
+                                    <constraint firstAttribute="bottom" secondItem="w3M-bb-RmW" secondAttribute="bottom" id="RQJ-JF-zWW"/>
+                                    <constraint firstItem="w3M-bb-RmW" firstAttribute="centerX" secondItem="cTb-uH-Dub" secondAttribute="centerX" id="jOM-dH-X9w"/>
+                                    <constraint firstItem="blZ-5o-YiT" firstAttribute="centerX" secondItem="cTb-uH-Dub" secondAttribute="centerX" id="oFO-Cr-6cq"/>
+                                    <constraint firstAttribute="trailing" secondItem="XgW-QQ-pXw" secondAttribute="trailing" id="r7d-v9-UmF"/>
+                                    <constraint firstItem="XgW-QQ-pXw" firstAttribute="centerX" secondItem="cTb-uH-Dub" secondAttribute="centerX" id="szn-du-Meb"/>
+                                    <constraint firstItem="Kbk-P7-zo3" firstAttribute="centerX" secondItem="blZ-5o-YiT" secondAttribute="centerX" id="xJv-zs-XFi"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.43133511772867916" green="0.80700265581184882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="blZ-5o-YiT" firstAttribute="top" secondItem="azy-p4-mFO" secondAttribute="bottom" constant="38" id="FRm-GE-Ycl"/>
+                            <constraint firstItem="cTb-uH-Dub" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-20" id="HRS-P2-1vg"/>
+                            <constraint firstItem="cTb-uH-Dub" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IWL-Sk-vi7"/>
+                            <constraint firstItem="cTb-uH-Dub" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OZg-P0-IaB"/>
+                            <constraint firstItem="azy-p4-mFO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TfB-pZ-Z84"/>
+                            <constraint firstItem="cTb-uH-Dub" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cOd-OJ-hSN"/>
+                            <constraint firstItem="azy-p4-mFO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e2g-bG-4Md"/>
+                            <constraint firstItem="cTb-uH-Dub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fjs-2A-8lp"/>
+                            <constraint firstItem="cTb-uH-Dub" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mwR-Vv-GEm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -78,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="112.8" y="115.59220389805098"/>
         </scene>
     </scenes>
     <resources>

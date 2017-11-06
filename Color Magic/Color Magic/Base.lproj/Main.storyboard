@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yCM-ZZ-Pop">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ColorPresenterVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gray is boring. Choose a color." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-Zc-Yb9">
-                                <rect key="frame" x="87" y="317" width="200" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gray is boring. Choose a color." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIW-Zc-Yb9">
+                                <rect key="frame" x="20" y="373.33333333333331" width="335" height="65.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -32,6 +32,10 @@
                         <color key="backgroundColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fIW-Zc-Yb9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fql-mo-fpo"/>
+                            <constraint firstItem="fIW-Zc-Yb9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WVN-2U-2Dd"/>
+                            <constraint firstAttribute="trailing" secondItem="fIW-Zc-Yb9" secondAttribute="trailing" constant="20" id="byM-R8-MGu"/>
+                            <constraint firstItem="fIW-Zc-Yb9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="c7c-1b-pBV"/>
+                            <constraint firstItem="fIW-Zc-Yb9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eId-za-ACM"/>
                             <constraint firstItem="fIW-Zc-Yb9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gZ1-QY-iEP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,14 +61,14 @@
             <objects>
                 <viewController id="iCj-XE-L0w" customClass="ColorPickerVC" customModule="Color_Magic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hxg-DL-HnO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d2R-L4-efr">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewN-99-Yzu">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                         <color key="backgroundColor" red="0.98298197984695435" green="0.65188705921173096" blue="0.71959751844406128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Pink">
@@ -76,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-fg-OKI">
-                                        <rect key="frame" x="0.0" y="100.5" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="115" width="375" height="115"/>
                                         <color key="backgroundColor" red="0.84088134765625" green="0.72691291570663452" blue="0.99995487928390503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Purple">
@@ -88,7 +92,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibQ-um-J34">
-                                        <rect key="frame" x="0.0" y="201" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="230" width="375" height="115"/>
                                         <color key="backgroundColor" red="0.32878598570823669" green="0.7809557318687439" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Blue">
@@ -100,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkR-GI-jWd">
-                                        <rect key="frame" x="0.0" y="301.5" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="345" width="375" height="115"/>
                                         <color key="backgroundColor" red="0.32886362075805664" green="0.78081279993057251" blue="0.56704264879226685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Green">
@@ -112,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9G-G4-xUS">
-                                        <rect key="frame" x="0.0" y="402" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="460" width="375" height="115"/>
                                         <color key="backgroundColor" red="0.91520005464553833" green="0.68955343961715698" blue="0.32601696252822876" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Orange">
@@ -124,7 +128,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l6-qG-tat">
-                                        <rect key="frame" x="0.0" y="502.5" width="375" height="100.5"/>
+                                        <rect key="frame" x="0.0" y="575" width="375" height="115"/>
                                         <color key="backgroundColor" red="0.9152369499206543" green="0.32042878866195679" blue="0.29654961824417114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                         <state key="normal" title="Red">
@@ -174,7 +178,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yCM-ZZ-Pop" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bUR-XI-Kn1">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>

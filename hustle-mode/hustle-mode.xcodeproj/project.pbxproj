@@ -12,6 +12,7 @@
 		B8ACAEF71F96EFE70045F8EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ACAEF51F96EFE70045F8EE /* Main.storyboard */; };
 		B8ACAEF91F96EFE70045F8EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8ACAEF81F96EFE70045F8EE /* Assets.xcassets */; };
 		B8ACAEFC1F96EFE70045F8EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8ACAEFA1F96EFE70045F8EE /* LaunchScreen.storyboard */; };
+		B8B3C1B01FB106250025C0C9 /* hustle-on.wav in Resources */ = {isa = PBXBuildFile; fileRef = B8B3C1AF1FB106240025C0C9 /* hustle-on.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B8ACAEF81F96EFE70045F8EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8ACAEFB1F96EFE70045F8EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8ACAEFD1F96EFE70045F8EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8B3C1AF1FB106240025C0C9 /* hustle-on.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "hustle-on.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				B8ACAEF81F96EFE70045F8EE /* Assets.xcassets */,
 				B8ACAEFA1F96EFE70045F8EE /* LaunchScreen.storyboard */,
 				B8ACAEFD1F96EFE70045F8EE /* Info.plist */,
+				B8B3C1AF1FB106240025C0C9 /* hustle-on.wav */,
 			);
 			path = "hustle-mode";
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8B3C1B01FB106250025C0C9 /* hustle-on.wav in Resources */,
 				B8ACAEFC1F96EFE70045F8EE /* LaunchScreen.storyboard in Resources */,
 				B8ACAEF91F96EFE70045F8EE /* Assets.xcassets in Resources */,
 				B8ACAEF71F96EFE70045F8EE /* Main.storyboard in Resources */,
