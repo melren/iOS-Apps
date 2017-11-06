@@ -47,4 +47,27 @@ class LeagueVC: UIViewController {
         nextBtn.isHidden = false
     }
     
+    //override means you can skip calling super
+    //always called before the viewDidLoad on the destination VC
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //might pass different data to diff segues
+        //checks if SkillVC is a segue.destination (generic VC) and store into skillVC constant
+        if let skillVC = segue.destination as? SkillVC {
+            skillVC.player = player
+        } //else if let otherVC....till all VC are done
+    }
+    
+    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {
+        nextBtn.isEnabled = false
+        nextBtn.isHidden = true
+    }
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }

@@ -168,7 +168,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="p9T-sd-njl" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="nPF-u2-XIt"/>
+                                    <segue destination="p9T-sd-njl" kind="unwind" unwindAction="unwindFromLeagueVCWithUnwindSegue:" id="nPF-u2-XIt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,20 +233,37 @@
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Beginner"/>
+                                        <connections>
+                                            <action selector="onBegTapped:" destination="ce7-cI-UUC" eventType="touchUpInside" id="XUT-Yg-t6Y"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1B5-0c-Ieg" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
                                         <rect key="frame" x="155" y="0.0" width="125" height="37"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                         <state key="normal" title="Baller"/>
+                                        <connections>
+                                            <action selector="onBallerTapped:" destination="ce7-cI-UUC" eventType="touchUpInside" id="fWh-7z-ylf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnk-ba-UHi" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnk-ba-UHi" customClass="BorderButton" customModule="Swoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="423" width="280" height="37"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <state key="normal" title="FINISH"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-wp-g1u">
+                                <rect key="frame" x="20" y="40" width="22" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="87m-9X-Yr0"/>
+                                    <constraint firstAttribute="width" constant="22" id="rh8-ee-gzW"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="S27-Nm-x91" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="x4q-Yw-WkU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -255,7 +272,9 @@
                             <constraint firstItem="lnk-ba-UHi" firstAttribute="centerX" secondItem="z6G-uD-RTF" secondAttribute="centerX" id="ERu-5W-w8U"/>
                             <constraint firstItem="ZDy-55-JDW" firstAttribute="leading" secondItem="0pc-In-EhW" secondAttribute="leading" id="Hpc-qr-Wg0"/>
                             <constraint firstItem="0pc-In-EhW" firstAttribute="trailing" secondItem="lnk-ba-UHi" secondAttribute="trailing" constant="20" id="JFX-iA-SME"/>
+                            <constraint firstItem="cXb-wp-g1u" firstAttribute="leading" secondItem="0pc-In-EhW" secondAttribute="leading" constant="20" id="JVe-Vg-tJC"/>
                             <constraint firstItem="5kQ-jX-5z9" firstAttribute="top" secondItem="0pc-In-EhW" secondAttribute="top" constant="20" id="JYO-e3-AOK"/>
+                            <constraint firstItem="cXb-wp-g1u" firstAttribute="top" secondItem="0pc-In-EhW" secondAttribute="top" constant="20" id="JtT-0f-gq2"/>
                             <constraint firstItem="z3d-TR-Hq6" firstAttribute="top" secondItem="ox3-TU-Eod" secondAttribute="bottom" constant="25" id="S08-3h-QHf"/>
                             <constraint firstItem="ZDy-55-JDW" firstAttribute="bottom" secondItem="0pc-In-EhW" secondAttribute="bottom" id="bLT-Rg-arO"/>
                             <constraint firstItem="0pc-In-EhW" firstAttribute="trailing" secondItem="z3d-TR-Hq6" secondAttribute="trailing" constant="20" id="faJ-ae-RqN"/>
@@ -269,8 +288,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0pc-In-EhW"/>
                     </view>
+                    <connections>
+                        <outlet property="finishBtn" destination="lnk-ba-UHi" id="ucy-c0-JzB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2h-WL-6A0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="S27-Nm-x91" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1160.8" y="106.59670164917542"/>
         </scene>
