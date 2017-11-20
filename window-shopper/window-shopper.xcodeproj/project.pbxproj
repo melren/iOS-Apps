@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8602D9F1FC38C0E007AD58D /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8602D9E1FC38C0E007AD58D /* CurrencyTextField.swift */; };
 		B866A82A1FB50FD100EE9966 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B866A8291FB50FD100EE9966 /* AppDelegate.swift */; };
-		B866A82C1FB50FD100EE9966 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B866A82B1FB50FD100EE9966 /* ViewController.swift */; };
+		B866A82C1FB50FD100EE9966 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B866A82B1FB50FD100EE9966 /* MainVC.swift */; };
 		B866A82F1FB50FD100EE9966 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B866A82D1FB50FD100EE9966 /* Main.storyboard */; };
 		B866A8311FB50FD100EE9966 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B866A8301FB50FD100EE9966 /* Assets.xcassets */; };
 		B866A8341FB50FD100EE9966 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B866A8321FB50FD100EE9966 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B8602D9E1FC38C0E007AD58D /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		B866A8261FB50FD100EE9966 /* window-shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "window-shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B866A8291FB50FD100EE9966 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B866A82B1FB50FD100EE9966 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B866A82B1FB50FD100EE9966 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B866A82E1FB50FD100EE9966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B866A8301FB50FD100EE9966 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B866A8331FB50FD100EE9966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B8602D9C1FC389E4007AD58D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B866A82B1FB50FD100EE9966 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B8602D9D1FC38BE0007AD58D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8602D9E1FC38C0E007AD58D /* CurrencyTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		B866A81D1FB50FD100EE9966 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +72,9 @@
 		B866A8281FB50FD100EE9966 /* window-shopper */ = {
 			isa = PBXGroup;
 			children = (
+				B8602D9D1FC38BE0007AD58D /* Views */,
+				B8602D9C1FC389E4007AD58D /* Controller */,
 				B866A8291FB50FD100EE9966 /* AppDelegate.swift */,
-				B866A82B1FB50FD100EE9966 /* ViewController.swift */,
 				B866A82D1FB50FD100EE9966 /* Main.storyboard */,
 				B866A8301FB50FD100EE9966 /* Assets.xcassets */,
 				B866A8321FB50FD100EE9966 /* LaunchScreen.storyboard */,
@@ -136,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B866A82C1FB50FD100EE9966 /* ViewController.swift in Sources */,
+				B8602D9F1FC38C0E007AD58D /* CurrencyTextField.swift in Sources */,
+				B866A82C1FB50FD100EE9966 /* MainVC.swift in Sources */,
 				B866A82A1FB50FD100EE9966 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
