@@ -43,8 +43,6 @@ class MainVC: UIViewController {
                 hoursLbl.isHidden = false
             }
         }
-        
-        
     }
     
     @IBAction func clearCalculatorPressed(_ sender: Any) {
