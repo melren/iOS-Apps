@@ -13,6 +13,11 @@
 		B8602DC61FC3C74A007AD58D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8602DC51FC3C74A007AD58D /* Assets.xcassets */; };
 		B8602DC91FC3C74A007AD58D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8602DC71FC3C74A007AD58D /* LaunchScreen.storyboard */; };
 		B8602DD41FC3CB1F007AD58D /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8602DD31FC3CB1F007AD58D /* CategoryCell.swift */; };
+		B8602DD61FC3CDE1007AD58D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8602DD51FC3CDE1007AD58D /* Category.swift */; };
+		B8602DD91FC3D370007AD58D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8602DD81FC3D370007AD58D /* DataService.swift */; };
+		B8602DDB1FC4C69F007AD58D /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8602DDA1FC4C69F007AD58D /* ProductCell.swift */; };
+		B8602DDD1FC4C7F0007AD58D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8602DDC1FC4C7F0007AD58D /* Product.swift */; };
+		B8602DDF1FC4CB39007AD58D /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8602DDE1FC4CB39007AD58D /* ProductsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		B8602DC81FC3C74A007AD58D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8602DCA1FC3C74A007AD58D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8602DD31FC3CB1F007AD58D /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		B8602DD51FC3CDE1007AD58D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B8602DD81FC3D370007AD58D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B8602DDA1FC4C69F007AD58D /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		B8602DDC1FC4C7F0007AD58D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B8602DDE1FC4CB39007AD58D /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 		B8602DBD1FC3C74A007AD58D /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				B8602DD71FC3D364007AD58D /* Services */,
 				B8602DD21FC3CAB7007AD58D /* Views */,
 				B8602DD11FC3CAB1007AD58D /* Model */,
 				B8602DD01FC3C780007AD58D /* Controllers */,
@@ -72,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				B8602DC01FC3C74A007AD58D /* CategoriesVC.swift */,
+				B8602DDE1FC4CB39007AD58D /* ProductsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -79,6 +91,8 @@
 		B8602DD11FC3CAB1007AD58D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B8602DD51FC3CDE1007AD58D /* Category.swift */,
+				B8602DDC1FC4C7F0007AD58D /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,8 +101,17 @@
 			isa = PBXGroup;
 			children = (
 				B8602DD31FC3CB1F007AD58D /* CategoryCell.swift */,
+				B8602DDA1FC4C69F007AD58D /* ProductCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B8602DD71FC3D364007AD58D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B8602DD81FC3D370007AD58D /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,9 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8602DDF1FC4CB39007AD58D /* ProductsVC.swift in Sources */,
 				B8602DC11FC3C74A007AD58D /* CategoriesVC.swift in Sources */,
 				B8602DBF1FC3C74A007AD58D /* AppDelegate.swift in Sources */,
 				B8602DD41FC3CB1F007AD58D /* CategoryCell.swift in Sources */,
+				B8602DDB1FC4C69F007AD58D /* ProductCell.swift in Sources */,
+				B8602DD61FC3CDE1007AD58D /* Category.swift in Sources */,
+				B8602DD91FC3D370007AD58D /* DataService.swift in Sources */,
+				B8602DDD1FC4C7F0007AD58D /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
