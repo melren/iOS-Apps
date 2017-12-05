@@ -126,7 +126,7 @@
                                     <action selector="loginBtnPressed:" destination="R67-GT-9kM" eventType="touchUpInside" id="pJF-yb-Oad"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2eG-cd-zVM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2eG-cd-zVM" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="10" y="683" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="4HR-4W-ZDI"/>
@@ -237,7 +237,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="TTH-6F-09U">
                                 <rect key="frame" x="62" y="184" width="250" height="94"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyK-D5-UgE">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YyK-D5-UgE" customClass="ColoredPlaceHolderText" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="24"/>
                                         <color key="textColor" red="0.3014903069" green="0.4760919213" blue="0.75831109289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -251,7 +251,7 @@
                                             <constraint firstAttribute="height" constant="2" id="fvZ-Ey-AXv"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9G7-dR-ekE">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9G7-dR-ekE" customClass="ColoredPlaceHolderText" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="76" height="24"/>
                                         <color key="textColor" red="0.3014903069" green="0.4760919213" blue="0.75831109289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -387,7 +387,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tKP-8C-o6y">
                                 <rect key="frame" x="61.999999999999986" y="164" width="250.66666666666663" height="128"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTI-MZ-voV">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTI-MZ-voV" customClass="ColoredPlaceHolderText" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250.66666666666666" height="24"/>
                                         <color key="textColor" red="0.3014903069" green="0.4760919213" blue="0.75831109289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -401,7 +401,7 @@
                                             <constraint firstAttribute="width" constant="250" id="rjN-dm-wVs"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-f2-34u">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GAe-f2-34u" customClass="ColoredPlaceHolderText" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="46" width="250.66666666666666" height="24"/>
                                         <color key="textColor" red="0.3014903069" green="0.4760919213" blue="0.75831109289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -415,7 +415,7 @@
                                             <constraint firstAttribute="width" constant="250" id="ZK2-2w-QcL"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TsR-au-yBn">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TsR-au-yBn" customClass="ColoredPlaceHolderText" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="250.66666666666666" height="24"/>
                                         <color key="textColor" red="0.3014903069" green="0.4760919213" blue="0.75831109289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
@@ -436,7 +436,7 @@
                                     <constraint firstItem="TsR-au-yBn" firstAttribute="width" secondItem="QMR-EY-ayW" secondAttribute="width" id="ggs-4u-4Uk"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-eR-tAB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="x1q-eR-tAB" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="137" y="332" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Euf-s0-NhC"/>
@@ -454,12 +454,17 @@
                                     <action selector="pickBGColorPressed:" destination="4Wu-lP-O5D" eventType="touchUpInside" id="EOk-0B-jJ6"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="WjT-76-0S3">
+                                <rect key="frame" x="169" y="287.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.36415272949999999" green="0.65276914829999999" blue="0.80298143629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6kX-vK-bKy" firstAttribute="top" secondItem="x1q-eR-tAB" secondAttribute="top" id="3gS-PP-Pdx"/>
                             <constraint firstItem="ADI-dL-RbL" firstAttribute="top" secondItem="6kX-vK-bKy" secondAttribute="bottom" constant="5" id="9nS-WV-Y3j"/>
                             <constraint firstItem="x1q-eR-tAB" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="AKA-dZ-oqG"/>
+                            <constraint firstItem="WjT-76-0S3" firstAttribute="centerY" secondItem="pqt-Tw-6sR" secondAttribute="centerY" constant="-100" id="AnB-tc-5nM"/>
                             <constraint firstItem="6kX-vK-bKy" firstAttribute="width" secondItem="x1q-eR-tAB" secondAttribute="width" id="EkL-Df-jBE"/>
                             <constraint firstItem="JTl-W2-LhE" firstAttribute="trailing" secondItem="Awt-Kq-aea" secondAttribute="trailing" constant="8" id="Iug-As-LoF"/>
                             <constraint firstItem="6kX-vK-bKy" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="JVk-nR-Fma"/>
@@ -472,6 +477,7 @@
                             <constraint firstItem="STV-qI-rvd" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="fSr-TB-SOt"/>
                             <constraint firstItem="tKP-8C-o6y" firstAttribute="top" secondItem="STV-qI-rvd" secondAttribute="bottom" constant="32.5" id="rFC-ht-Wep"/>
                             <constraint firstItem="JTl-W2-LhE" firstAttribute="bottom" secondItem="tff-my-N0A" secondAttribute="bottom" constant="20" id="rJZ-aA-GuV"/>
+                            <constraint firstItem="WjT-76-0S3" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="svZ-C5-bkk"/>
                             <constraint firstItem="tKP-8C-o6y" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="weU-w3-lj1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JTl-W2-LhE"/>
@@ -479,6 +485,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="GAe-f2-34u" id="xXP-1h-cwQ"/>
                         <outlet property="passTxt" destination="TsR-au-yBn" id="KKP-Gw-oR8"/>
+                        <outlet property="spinner" destination="WjT-76-0S3" id="JPv-1w-fhx"/>
                         <outlet property="userImg" destination="x1q-eR-tAB" id="3iI-mV-tSC"/>
                         <outlet property="usernameTxt" destination="KTI-MZ-voV" id="vJ1-3L-nqe"/>
                         <segue destination="oGz-Qk-f3C" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="isb-JY-2HX"/>
