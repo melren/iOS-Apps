@@ -110,7 +110,7 @@ class AuthService {
             
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
-                    self.insertData(json: json)
+                    self.setUserInfo(json: json)
                     completion(true)
                 }
                     
@@ -121,7 +121,23 @@ class AuthService {
         }
     }
     
-    func insertData(json: Dictionary<String, Any>) {
+    func findUserByEmail(completion: @escaping CompletionHandler) {
+        
+        Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            
+            if response.result.error == nil {
+                if let json = response.result.value as? Dictionary<String, Any> {
+                    self.setUserInfo(json: json)
+                    completion(true)
+                }
+            } else {
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func setUserInfo(json: Dictionary<String, Any>) {
         guard let id = json["_id"] as? String else { return }
         guard let avatarColor = json["avatarColor"] as? String else { return }
         guard let avatarName = json["avatarName"] as? String else { return }
