@@ -33,6 +33,9 @@ class CreateAccountVC: UIViewController {
             if avatarName.contains("light") && bgColor == nil {
                 userImg.backgroundColor = UIColor.gray
             }
+            if UserDataService.instance.avatarColor != "" {
+                userImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+            }
         }
     }
     @IBAction func createAccntPressed(_ sender: Any) {
@@ -81,10 +84,7 @@ class CreateAccountVC: UIViewController {
     
     func setupView() {
         spinner.isHidden = true
-//        usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: SMACK_PURPLE_PLACEHOLDER])
-//        emailTxt.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: SMACK_PURPLE_PLACEHOLDER])
-//        passTxt.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: SMACK_PURPLE_PLACEHOLDER])
-//    
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(CreateAccountVC.handleTap))
         view.addGestureRecognizer(tap)
     }
