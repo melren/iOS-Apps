@@ -14,6 +14,7 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var userImg: CircleImage!
     @IBOutlet weak var tableView: UITableView!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     override func viewDidAppear(_ animated: Bool) {
         setupUserInfo()
+    }
+    
+    @IBAction func addChannelPressed(_ sender: Any) {
+        let addChannel = AddChannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {

@@ -115,6 +115,9 @@
                                     <constraint firstAttribute="width" constant="16" id="WiB-DJ-I7m"/>
                                 </constraints>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelPressed:" destination="R67-GT-9kM" eventType="touchUpInside" id="XIS-EJ-GuF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjh-3D-clq">
                                 <rect key="frame" x="105" y="702" width="47" height="37"/>
