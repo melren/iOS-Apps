@@ -40,7 +40,7 @@ class SocketService: NSObject {
             guard let channelDesc = dataArray[1] as? String else { return }
             guard let channelID = dataArray[2] as? String else { return }
             
-            let newChannel = Channel(_id: channelID, name: channelName, description: channelName, __v: 0)
+            let newChannel = Channel(_id: channelID, name: channelName, description: channelDesc, __v: 0)
             MessageService.instance.channels.append(newChannel)
             completion(true)
         }
