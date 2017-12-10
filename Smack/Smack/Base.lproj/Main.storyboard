@@ -419,27 +419,38 @@
                                 <rect key="frame" x="169" y="407.66666666666669" width="37" height="37"/>
                                 <color key="color" red="0.3014903069" green="0.4760919213" blue="0.75831109289999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bu-kp-QYw">
+                                <rect key="frame" x="62.666666666666657" y="278" width="249.99999999999997" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="v1Q-w5-7ki" firstAttribute="top" secondItem="h8m-zK-C3L" secondAttribute="top" constant="60" id="5PI-xh-NQJ"/>
                             <constraint firstItem="v1Q-w5-7ki" firstAttribute="centerX" secondItem="MEF-Xm-eO6" secondAttribute="centerX" id="CjU-2w-lYy"/>
                             <constraint firstItem="TTH-6F-09U" firstAttribute="centerX" secondItem="MEF-Xm-eO6" secondAttribute="centerX" id="QeG-FN-pER"/>
+                            <constraint firstItem="3Bu-kp-QYw" firstAttribute="centerX" secondItem="MEF-Xm-eO6" secondAttribute="centerX" id="Ufx-C3-CXY"/>
                             <constraint firstItem="jad-tS-IUc" firstAttribute="width" secondItem="ihO-z8-JU5" secondAttribute="width" id="VUg-45-pEc"/>
                             <constraint firstItem="h8m-zK-C3L" firstAttribute="trailing" secondItem="2yx-1u-koa" secondAttribute="trailing" constant="10" id="WKR-HH-MbQ"/>
                             <constraint firstItem="6au-kh-fqt" firstAttribute="centerY" secondItem="MEF-Xm-eO6" secondAttribute="centerY" constant="20" id="aCI-34-aO2"/>
+                            <constraint firstItem="3Bu-kp-QYw" firstAttribute="width" secondItem="TTH-6F-09U" secondAttribute="width" id="djr-bK-a68"/>
                             <constraint firstItem="6au-kh-fqt" firstAttribute="centerX" secondItem="MEF-Xm-eO6" secondAttribute="centerX" id="dkr-Xv-cDL"/>
+                            <constraint firstItem="3Bu-kp-QYw" firstAttribute="top" secondItem="TTH-6F-09U" secondAttribute="bottom" id="hY1-S1-wxe"/>
                             <constraint firstItem="ihO-z8-JU5" firstAttribute="top" secondItem="TTH-6F-09U" secondAttribute="bottom" constant="40" id="lTZ-z4-Y1n"/>
                             <constraint firstItem="jad-tS-IUc" firstAttribute="centerX" secondItem="MEF-Xm-eO6" secondAttribute="centerX" id="ly2-Zm-zY1"/>
                             <constraint firstItem="2yx-1u-koa" firstAttribute="top" secondItem="MEF-Xm-eO6" secondAttribute="topMargin" constant="8" id="r3k-UM-fq9"/>
                             <constraint firstItem="ihO-z8-JU5" firstAttribute="centerX" secondItem="MEF-Xm-eO6" secondAttribute="centerX" id="ulT-qb-ehY"/>
                             <constraint firstItem="TTH-6F-09U" firstAttribute="top" secondItem="v1Q-w5-7ki" secondAttribute="bottom" constant="40" id="wAc-4P-UpN"/>
+                            <constraint firstItem="ihO-z8-JU5" firstAttribute="top" secondItem="3Bu-kp-QYw" secondAttribute="bottom" id="yrn-gI-aiI"/>
                             <constraint firstItem="jad-tS-IUc" firstAttribute="top" secondItem="ihO-z8-JU5" secondAttribute="bottom" id="zNQ-Ox-qTO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h8m-zK-C3L"/>
                     </view>
                     <connections>
                         <outlet property="emailTxt" destination="YyK-D5-UgE" id="ahc-ww-Gyn"/>
+                        <outlet property="errorMsg" destination="3Bu-kp-QYw" id="07E-Ym-Kaf"/>
                         <outlet property="passTxt" destination="9G7-dR-ekE" id="iC3-4f-jr6"/>
                         <outlet property="spinner" destination="6au-kh-fqt" id="iHY-U6-Zy2"/>
                         <segue destination="4Wu-lP-O5D" kind="show" identifier="toCreateAccount" id="e2l-SI-aHx"/>
@@ -447,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vx-0Y-2Mg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213.5999999999999" y="-368.36581709145429"/>
+            <point key="canvasLocation" x="1213.5999999999999" y="-368.7192118226601"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="L5I-Jp-mnX">

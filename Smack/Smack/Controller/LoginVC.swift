@@ -13,6 +13,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailTxt: ColoredPlaceHolderText!
     @IBOutlet weak var passTxt: ColoredPlaceHolderText!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var errorMsg: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +29,17 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
+        errorMsg.isHidden = true
+        guard let email = emailTxt.text, emailTxt.text != "" else {
+            emptyFieldError()
+            return }
+        guard let pass = passTxt.text, passTxt.text != "" else {
+            emptyFieldError()
+            return }
+    
         spinner.isHidden = false
         spinner.startAnimating()
         
-        guard let email = emailTxt.text, emailTxt.text != "" else { return }
-        guard let pass = passTxt.text, passTxt.text != "" else { return }
-    
         AuthService.instance.loginUser(email: email, password: pass) { (success) in
             if success {
                 AuthService.instance.findUserByEmail(completion: { (success) in
@@ -47,8 +53,24 @@ class LoginVC: UIViewController {
                         self.dismiss(animated: true, completion: nil)
                     }
                 })
+            } else {
+                self.authenticationError()
             }
         }
+    }
+    
+    func emptyFieldError() {
+        self.spinner.stopAnimating()
+        self.spinner.isHidden = true
+        errorMsg.text = "The email and password fields cannot be empty, please supply valid credentials"
+        errorMsg.isHidden = false
+    }
+    
+    func authenticationError() {
+        self.spinner.stopAnimating()
+        self.spinner.isHidden = true
+        errorMsg.text = "The email or password provided is incorrect, please try again."
+        errorMsg.isHidden = false
     }
     
     func setupView() {
