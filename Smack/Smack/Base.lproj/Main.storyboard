@@ -71,14 +71,17 @@
                                     <constraint firstItem="uVg-gb-fj3" firstAttribute="centerY" secondItem="yj1-U1-sKp" secondAttribute="centerY" id="a7r-rX-B3y"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDP-ga-PhH">
-                                <rect key="frame" x="0.0" y="738" width="337" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type message here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDP-ga-PhH">
+                                <rect key="frame" x="0.0" y="738" width="375" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="k0N-ei-6iC"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="msgBoxEditting:" destination="km1-UZ-XFM" eventType="editingChanged" id="iTS-Gc-4nE"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsi-EX-mjU">
                                 <rect key="frame" x="337" y="743" width="30" height="30"/>
@@ -164,7 +167,7 @@
                             <constraint firstItem="Nek-Pn-KgY" firstAttribute="trailing" secondItem="AVQ-OV-kiX" secondAttribute="trailing" id="g5R-az-jFb"/>
                             <constraint firstItem="rKF-jY-dQP" firstAttribute="trailing" secondItem="Nek-Pn-KgY" secondAttribute="trailing" id="oJw-RC-7Zs"/>
                             <constraint firstItem="bsi-EX-mjU" firstAttribute="centerY" secondItem="nDP-ga-PhH" secondAttribute="centerY" id="sGA-oK-6Ak"/>
-                            <constraint firstItem="Nek-Pn-KgY" firstAttribute="trailing" secondItem="nDP-ga-PhH" secondAttribute="trailing" constant="38" id="sl7-IB-98k"/>
+                            <constraint firstItem="Nek-Pn-KgY" firstAttribute="trailing" secondItem="nDP-ga-PhH" secondAttribute="trailing" id="sl7-IB-98k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nek-Pn-KgY"/>
                     </view>
@@ -172,6 +175,7 @@
                         <outlet property="channelNameLbl" destination="uVg-gb-fj3" id="T7B-gp-GO8"/>
                         <outlet property="menuBtn" destination="yj1-U1-sKp" id="VBk-tS-Owy"/>
                         <outlet property="messageTxtBox" destination="nDP-ga-PhH" id="c6k-u4-BBS"/>
+                        <outlet property="sendBtn" destination="bsi-EX-mjU" id="3YG-Mn-1N6"/>
                         <outlet property="tableview" destination="AVQ-OV-kiX" id="ipB-iN-NfI"/>
                     </connections>
                 </viewController>
