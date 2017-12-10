@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="height" constant="40" id="k0N-ei-6iC"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="msgBoxEditting:" destination="km1-UZ-XFM" eventType="editingChanged" id="iTS-Gc-4nE"/>
@@ -153,6 +153,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDG-zU-1fh">
+                                <rect key="frame" x="8" y="734" width="359" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -160,14 +166,17 @@
                             <constraint firstItem="nDP-ga-PhH" firstAttribute="leading" secondItem="Nek-Pn-KgY" secondAttribute="leading" id="Gs1-Tp-QaD"/>
                             <constraint firstAttribute="bottomMargin" secondItem="nDP-ga-PhH" secondAttribute="bottom" id="Oim-HH-a6M"/>
                             <constraint firstItem="AVQ-OV-kiX" firstAttribute="top" secondItem="rKF-jY-dQP" secondAttribute="bottom" id="RgI-Ce-ame"/>
+                            <constraint firstItem="Nek-Pn-KgY" firstAttribute="trailing" secondItem="aDG-zU-1fh" secondAttribute="trailing" constant="8" id="Vof-s6-eRc"/>
                             <constraint firstItem="Nek-Pn-KgY" firstAttribute="trailing" secondItem="bsi-EX-mjU" secondAttribute="trailing" constant="8" id="YHE-Ei-jF0"/>
                             <constraint firstItem="AVQ-OV-kiX" firstAttribute="leading" secondItem="Nek-Pn-KgY" secondAttribute="leading" id="a3I-L2-7xN"/>
                             <constraint firstItem="rKF-jY-dQP" firstAttribute="top" secondItem="Sit-iD-96u" secondAttribute="top" id="b86-vT-aCU"/>
                             <constraint firstItem="rKF-jY-dQP" firstAttribute="leading" secondItem="Nek-Pn-KgY" secondAttribute="leading" id="fIW-3u-WPs"/>
                             <constraint firstItem="Nek-Pn-KgY" firstAttribute="trailing" secondItem="AVQ-OV-kiX" secondAttribute="trailing" id="g5R-az-jFb"/>
+                            <constraint firstItem="aDG-zU-1fh" firstAttribute="leading" secondItem="Nek-Pn-KgY" secondAttribute="leading" constant="8" id="jff-Cf-jVU"/>
                             <constraint firstItem="rKF-jY-dQP" firstAttribute="trailing" secondItem="Nek-Pn-KgY" secondAttribute="trailing" id="oJw-RC-7Zs"/>
                             <constraint firstItem="bsi-EX-mjU" firstAttribute="centerY" secondItem="nDP-ga-PhH" secondAttribute="centerY" id="sGA-oK-6Ak"/>
                             <constraint firstItem="Nek-Pn-KgY" firstAttribute="trailing" secondItem="nDP-ga-PhH" secondAttribute="trailing" id="sl7-IB-98k"/>
+                            <constraint firstItem="nDP-ga-PhH" firstAttribute="top" secondItem="aDG-zU-1fh" secondAttribute="bottom" constant="4" id="tsQ-WU-rh1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Nek-Pn-KgY"/>
                     </view>
@@ -177,6 +186,7 @@
                         <outlet property="messageTxtBox" destination="nDP-ga-PhH" id="c6k-u4-BBS"/>
                         <outlet property="sendBtn" destination="bsi-EX-mjU" id="3YG-Mn-1N6"/>
                         <outlet property="tableview" destination="AVQ-OV-kiX" id="ipB-iN-NfI"/>
+                        <outlet property="typingUserLbl" destination="aDG-zU-1fh" id="vSl-Y9-EK0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bta-uJ-EYF" userLabel="First Responder" sceneMemberID="firstResponder"/>
