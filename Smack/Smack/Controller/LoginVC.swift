@@ -62,14 +62,14 @@ class LoginVC: UIViewController {
     func emptyFieldError() {
         self.spinner.stopAnimating()
         self.spinner.isHidden = true
-        errorMsg.text = "The email and password fields cannot be empty, please supply valid credentials"
+        errorMsg.text = "The email and password fields cannot be empty, please supply valid credentials."
         errorMsg.isHidden = false
     }
     
     func authenticationError() {
         self.spinner.stopAnimating()
         self.spinner.isHidden = true
-        errorMsg.text = "The email or password provided is incorrect, please try again."
+        errorMsg.text = "The email or password provided is invalid, please check your credientials."
         errorMsg.isHidden = false
     }
     
