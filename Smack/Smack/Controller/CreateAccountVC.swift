@@ -52,28 +52,41 @@ class CreateAccountVC: UIViewController {
         guard let pass = passTxt.text, passTxt.text != "" else {
             emptyFieldError()
             return }
-    
-        AuthService.instance.registerUser(email: email, password: pass) { (success) in
-            if success {
-                AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
-                    if success {
-                        AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
-                            if success {
-                                self.spinner.stopAnimating()
-                                self.spinner.isHidden = true
-                                self.performSegue(withIdentifier: UNWIND, sender: nil)
-                                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-                            }
-                        })
-                    }
-                })
-            } else {
-                self.accntErrorMsg.text = "This email is already registered."
-                self.accntErrorMsg.isHidden = false
-                self.spinner.stopAnimating()
-                self.spinner.isHidden = true
+        
+        if validEmail(email: email) {
+            AuthService.instance.registerUser(email: email, password: pass) { (success) in
+                if success {
+                    AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
+                        if success {
+                            AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                                if success {
+                                    self.spinner.stopAnimating()
+                                    self.spinner.isHidden = true
+                                    self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                    NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                                }
+                            })
+                        }
+                    })
+                } else {
+                    self.accntErrorMsg.text = "This email is already registered."
+                    self.accntErrorMsg.isHidden = false
+                    self.spinner.stopAnimating()
+                    self.spinner.isHidden = true
+                }
             }
         }
+    }
+    
+    func validEmail(email: String) -> Bool {
+        if email.lowercased().range(of: "@") == nil || email.lowercased().range(of: ".") == nil {
+            accntErrorMsg.text = "Invalid email format."
+            accntErrorMsg.isHidden = false
+            spinner.stopAnimating()
+            spinner.isHidden = true
+            return false
+        }
+        return true
     }
     
     @IBAction func pickAvatarPressed(_ sender: Any) {
