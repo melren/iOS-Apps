@@ -15,6 +15,7 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var passTxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var accntErrorMsg: UILabel!
     
     // Default variables
     var avatarName = "profileDefault"
@@ -39,11 +40,18 @@ class CreateAccountVC: UIViewController {
         }
     }
     @IBAction func createAccntPressed(_ sender: Any) {
+        accntErrorMsg.isHidden = true
         spinner.isHidden = false
         spinner.startAnimating()
-        guard let name = usernameTxt.text, usernameTxt.text != "" else { return }
-        guard let email = emailTxt.text, emailTxt.text != "" else { return }
-        guard let pass = passTxt.text, passTxt.text != "" else { return }
+        guard let name = usernameTxt.text, usernameTxt.text != "" else {
+            emptyFieldError()
+            return }
+        guard let email = emailTxt.text, emailTxt.text != "" else {
+            emptyFieldError()
+            return }
+        guard let pass = passTxt.text, passTxt.text != "" else {
+            emptyFieldError()
+            return }
     
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
@@ -59,6 +67,11 @@ class CreateAccountVC: UIViewController {
                         })
                     }
                 })
+            } else {
+                self.accntErrorMsg.text = "This email is already registered."
+                self.accntErrorMsg.isHidden = false
+                self.spinner.stopAnimating()
+                self.spinner.isHidden = true
             }
         }
     }
@@ -91,6 +104,13 @@ class CreateAccountVC: UIViewController {
     
     @objc func handleTap() {
         view.endEditing(true)
+    }
+    
+    func emptyFieldError() {
+        self.spinner.stopAnimating()
+        self.spinner.isHidden = true
+        accntErrorMsg.text = "The username, email and password fields cannot be empty."
+        accntErrorMsg.isHidden = false
     }
     
 }

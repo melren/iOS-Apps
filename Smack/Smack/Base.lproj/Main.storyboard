@@ -594,6 +594,12 @@
                                 <rect key="frame" x="169" y="287.66666666666669" width="37" height="37"/>
                                 <color key="color" red="0.36415272949999999" green="0.65276914829999999" blue="0.80298143629999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error message" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuw-ai-ARn">
+                                <rect key="frame" x="62.666666666666657" y="292" width="249.99999999999997" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -601,15 +607,19 @@
                             <constraint firstItem="ADI-dL-RbL" firstAttribute="top" secondItem="6kX-vK-bKy" secondAttribute="bottom" constant="5" id="9nS-WV-Y3j"/>
                             <constraint firstItem="x1q-eR-tAB" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="AKA-dZ-oqG"/>
                             <constraint firstItem="WjT-76-0S3" firstAttribute="centerY" secondItem="pqt-Tw-6sR" secondAttribute="centerY" constant="-100" id="AnB-tc-5nM"/>
+                            <constraint firstItem="x1q-eR-tAB" firstAttribute="top" secondItem="Nuw-ai-ARn" secondAttribute="bottom" id="Dlz-XL-Vbg"/>
                             <constraint firstItem="6kX-vK-bKy" firstAttribute="width" secondItem="x1q-eR-tAB" secondAttribute="width" id="EkL-Df-jBE"/>
+                            <constraint firstItem="Nuw-ai-ARn" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="FVW-E0-Ovk"/>
                             <constraint firstItem="JTl-W2-LhE" firstAttribute="trailing" secondItem="Awt-Kq-aea" secondAttribute="trailing" constant="8" id="Iug-As-LoF"/>
                             <constraint firstItem="6kX-vK-bKy" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="JVk-nR-Fma"/>
+                            <constraint firstItem="Nuw-ai-ARn" firstAttribute="top" secondItem="tKP-8C-o6y" secondAttribute="bottom" id="Kpz-p4-mJi"/>
                             <constraint firstItem="ADI-dL-RbL" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="NUg-iR-b4M"/>
                             <constraint firstItem="WjT-76-0S3" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="OAX-hv-0Sz"/>
                             <constraint firstItem="Awt-Kq-aea" firstAttribute="top" secondItem="JTl-W2-LhE" secondAttribute="top" constant="10" id="OGg-ox-sem"/>
                             <constraint firstItem="STV-qI-rvd" firstAttribute="top" secondItem="JTl-W2-LhE" secondAttribute="top" constant="60" id="Wlm-NI-eWu"/>
                             <constraint firstItem="tff-my-N0A" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="aTk-Eo-mR6"/>
                             <constraint firstItem="x1q-eR-tAB" firstAttribute="top" secondItem="tKP-8C-o6y" secondAttribute="bottom" constant="40" id="av0-3D-hDx"/>
+                            <constraint firstItem="Nuw-ai-ARn" firstAttribute="width" secondItem="tKP-8C-o6y" secondAttribute="width" id="cvx-zs-z7o"/>
                             <constraint firstItem="ADI-dL-RbL" firstAttribute="width" secondItem="tff-my-N0A" secondAttribute="width" id="eAv-hi-sIV"/>
                             <constraint firstItem="STV-qI-rvd" firstAttribute="centerX" secondItem="pqt-Tw-6sR" secondAttribute="centerX" id="fSr-TB-SOt"/>
                             <constraint firstItem="tKP-8C-o6y" firstAttribute="top" secondItem="STV-qI-rvd" secondAttribute="bottom" constant="32.5" id="rFC-ht-Wep"/>
@@ -619,6 +629,7 @@
                         <viewLayoutGuide key="safeArea" id="JTl-W2-LhE"/>
                     </view>
                     <connections>
+                        <outlet property="accntErrorMsg" destination="Nuw-ai-ARn" id="mvf-yE-eau"/>
                         <outlet property="emailTxt" destination="GAe-f2-34u" id="xXP-1h-cwQ"/>
                         <outlet property="passTxt" destination="TsR-au-yBn" id="KKP-Gw-oR8"/>
                         <outlet property="spinner" destination="WjT-76-0S3" id="JPv-1w-fhx"/>

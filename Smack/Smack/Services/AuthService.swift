@@ -51,9 +51,16 @@ class AuthService {
             "email": lowerCaseEmail,
             "password": password
         ]
+
         Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
-            
             if response.result.error == nil {
+                print(response)
+                if let message = response.result.value as? String {
+                    if message.lowercased().range(of: "message") != nil {
+                        completion(false)
+                        return
+                    }
+                }
                 completion(true)    //refers to custom completion handler in the func input
             } else {
                 completion(false)
@@ -73,6 +80,7 @@ class AuthService {
             if response.result.error == nil {
                 if let json = response.result.value as? Dictionary<String, Any> {
                     if let message = json["message"] as? String {       // this means you couldn't authenticate
+                        print(message)
                         completion(false)
                         return
                     }
