@@ -12,6 +12,11 @@
 		B82696A32057405800E9AB7D /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82696A22057405800E9AB7D /* ChatVC.swift */; };
 		B82696A52057406400E9AB7D /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82696A42057406400E9AB7D /* ChannelVC.swift */; };
 		B82696A72058658600E9AB7D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82696A62058658600E9AB7D /* GradientView.swift */; };
+		B82696AA2058746D00E9AB7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82696A92058746D00E9AB7D /* Constants.swift */; };
+		B82696AC20587C6000E9AB7D /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82696AB20587C6000E9AB7D /* RoundedButton.swift */; };
+		B82696AE2058805100E9AB7D /* ColoredPlaceHolderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82696AD2058805100E9AB7D /* ColoredPlaceHolderText.swift */; };
+		B82696B0205883FB00E9AB7D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82696AF205883FB00E9AB7D /* LoginVC.swift */; };
+		B85D46D4205891EC007EF118 /* CreateAcctVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85D46D3205891EC007EF118 /* CreateAcctVC.swift */; };
 		B87338662057181100BB5696 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87338652057181100BB5696 /* AppDelegate.swift */; };
 		B873386B2057181100BB5696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87338692057181100BB5696 /* Main.storyboard */; };
 		B873386D2057181100BB5696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B873386C2057181100BB5696 /* Assets.xcassets */; };
@@ -27,6 +32,11 @@
 		B82696A22057405800E9AB7D /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		B82696A42057406400E9AB7D /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		B82696A62058658600E9AB7D /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		B82696A92058746D00E9AB7D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B82696AB20587C6000E9AB7D /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		B82696AD2058805100E9AB7D /* ColoredPlaceHolderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoredPlaceHolderText.swift; sourceTree = "<group>"; };
+		B82696AF205883FB00E9AB7D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		B85D46D3205891EC007EF118 /* CreateAcctVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAcctVC.swift; sourceTree = "<group>"; };
 		B87338622057181100BB5696 /* Ivory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ivory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87338652057181100BB5696 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B873386A2057181100BB5696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +90,8 @@
 			children = (
 				B82696A22057405800E9AB7D /* ChatVC.swift */,
 				B82696A42057406400E9AB7D /* ChannelVC.swift */,
+				B82696AF205883FB00E9AB7D /* LoginVC.swift */,
+				B85D46D3205891EC007EF118 /* CreateAcctVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				B82696A62058658600E9AB7D /* GradientView.swift */,
+				B82696AB20587C6000E9AB7D /* RoundedButton.swift */,
+				B82696AD2058805100E9AB7D /* ColoredPlaceHolderText.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +111,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B82696A82058745C00E9AB7D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B82696A92058746D00E9AB7D /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B87338592057181100BB5696 = {
@@ -120,6 +142,7 @@
 		B87338642057181100BB5696 /* Ivory */ = {
 			isa = PBXGroup;
 			children = (
+				B82696A82058745C00E9AB7D /* Utilities */,
 				B82696A12057403000E9AB7D /* Model */,
 				B82696A02057402A00E9AB7D /* View */,
 				B826969F2057402300E9AB7D /* Controller */,
@@ -270,10 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B82696A52057406400E9AB7D /* ChannelVC.swift in Sources */,
+				B85D46D4205891EC007EF118 /* CreateAcctVC.swift in Sources */,
 				B82696A32057405800E9AB7D /* ChatVC.swift in Sources */,
 				B82696A72058658600E9AB7D /* GradientView.swift in Sources */,
 				B87338662057181100BB5696 /* AppDelegate.swift in Sources */,
+				B82696AC20587C6000E9AB7D /* RoundedButton.swift in Sources */,
+				B82696B0205883FB00E9AB7D /* LoginVC.swift in Sources */,
 				B826969E20571F3B00E9AB7D /* SWRevealViewController.m in Sources */,
+				B82696AA2058746D00E9AB7D /* Constants.swift in Sources */,
+				B82696AE2058805100E9AB7D /* ColoredPlaceHolderText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
