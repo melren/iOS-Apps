@@ -54,8 +54,7 @@ class AuthService {
 
         Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
             if response.result.error == nil {
-                print(response)
-                if let message = response.result.value as? String {
+                if let message = response.result.value {
                     if message.lowercased().range(of: "message") != nil {
                         completion(false)
                         return
