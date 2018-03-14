@@ -271,7 +271,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6B-zA-v71">
                                         <rect key="frame" x="0.0" y="66" width="250" height="2"/>
@@ -363,11 +363,13 @@
                                     <constraint firstAttribute="width" constant="250" id="pl7-9U-o2G"/>
                                 </constraints>
                                 <state key="normal" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAcctPressed:" destination="rYW-cf-UPo" eventType="touchUpInside" id="6RC-9c-TGH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srM-ej-Zgn">
                                 <rect key="frame" x="137.5" y="287.5" width="100" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="crc-tB-IOh"/>
                                     <constraint firstAttribute="height" constant="130" id="fKw-GM-oIH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
@@ -376,6 +378,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAcctBtnPressed:" destination="fjj-z1-Qj6" eventType="touchUpInside" id="LTO-mR-xnm"/>
+                                    <action selector="pickAvatarPressed:" destination="rYW-cf-UPo" eventType="touchUpInside" id="9r6-Y3-0r8"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m5u-US-HiA">
@@ -422,7 +425,7 @@
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbC-ko-lGy">
                                         <rect key="frame" x="0.0" y="105" width="250" height="2"/>
@@ -465,6 +468,7 @@
                                 </state>
                                 <connections>
                                     <action selector="createAcctBtnPressed:" destination="fjj-z1-Qj6" eventType="touchUpInside" id="lmD-HV-B9R"/>
+                                    <action selector="pickBGColorPressed:" destination="rYW-cf-UPo" eventType="touchUpInside" id="GDi-jE-1KU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -491,6 +495,11 @@
                         <viewLayoutGuide key="safeArea" id="T7v-ju-oik"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="E7M-GK-fvG" id="8wX-hp-2Hq"/>
+                        <outlet property="errorTxt" destination="qle-0m-kzy" id="GCt-tl-IYG"/>
+                        <outlet property="passTxt" destination="zHO-NY-RlO" id="2hZ-N3-t99"/>
+                        <outlet property="userImg" destination="SUs-YO-1mZ" id="CN7-Rs-duE"/>
+                        <outlet property="usernameTxt" destination="JBL-ga-MJq" id="WYh-lr-U7H"/>
                         <segue destination="GaJ-Wv-jT8" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="nVh-bF-fVK"/>
                     </connections>
                 </viewController>
