@@ -14,6 +14,9 @@ typealias CompletionErrorHandler = (_ Message: String) -> ()
 // Colors
 let IVORY_PLACEHOLDER = #colorLiteral(red: 0.409147501, green: 0.5773295164, blue: 0.751957953, alpha: 0.5)
 
+// Notifications
+let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCT = "toCreateAcct"

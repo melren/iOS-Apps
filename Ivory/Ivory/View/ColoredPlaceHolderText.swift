@@ -18,6 +18,7 @@ class ColoredPlaceHolderText: UITextField {
     }
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         self.setupView()
     }
     
