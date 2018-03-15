@@ -77,13 +77,14 @@ class CreateAcctVC: UIViewController {
         AuthService.instance.registerUser(email: email, password: pass) { (completion) in
             if completion == "success" {
                 self.errorTxt.isHidden = true
-                
-                AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
-                    if success {
-                        AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                AuthService.instance.loginUser(email: email, password: pass, completion: { (response) in
+                    if response == "" {
+                        print("Successfully logged in user")
+                        AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { ( success ) in
                             if success {
                                 self.performSegue(withIdentifier: UNWIND, sender: nil)
                                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                                
                             }
                         })
                     }
@@ -106,6 +107,7 @@ class CreateAcctVC: UIViewController {
         let b = CGFloat(arc4random_uniform(255)) / 255
         
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        avatarColor = "[\(r), \(g), \(b), 1]"
         UIView.animate(withDuration: 0.2) {
             self.userImg.backgroundColor = self.bgColor
         }
