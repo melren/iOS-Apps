@@ -44,7 +44,7 @@ class AuthService {
         }
     }
     
-    var errorMsg: String = ""
+    public private(set) var errorMsg: String = ""
     
     func registerUser(email: String, password: String, completion: @escaping CompletionErrorHandler) {
         errorMsg = ""
