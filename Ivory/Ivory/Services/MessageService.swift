@@ -16,6 +16,7 @@ class MessageService {
     
     // Place to store channels
     var channels = [Channel]()
+    var selectedChannel : Channel?
     
     // Function to retrieve channels
     func findAllChannels(completion: @escaping CompletionHandler) {
@@ -31,7 +32,7 @@ class MessageService {
                         let channel = Channel(channelTitle: name, channelDesc: desc, id: id)
                         self.channels.append(channel)
                     }
-                    
+                    NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                     completion(true)
                 }
             } else {
@@ -39,5 +40,9 @@ class MessageService {
                 debugPrint(response.result.error as Any)
             }
         }
+    }
+    
+    func clearChannels() {
+        channels.removeAll()
     }
 }

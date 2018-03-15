@@ -20,6 +20,7 @@
             <connections>
                 <outlet property="bgView" destination="KeF-aK-xGZ" id="UB3-ig-vkt"/>
                 <outlet property="chanDesc" destination="pMf-Sj-xnD" id="2M8-NA-JxT"/>
+                <outlet property="errorTxt" destination="dbN-Xq-KAo" id="XPG-Si-mTf"/>
                 <outlet property="nameTxt" destination="fmp-59-oV4" id="V68-u7-DVm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -108,6 +109,16 @@
                                 <action selector="createChanPressed:" destination="-1" eventType="touchUpInside" id="kPL-C1-yqq"/>
                             </connections>
                         </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channel name cannot be empty" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbN-Xq-KAo">
+                            <rect key="frame" x="42" y="176" width="250" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="3Tl-kU-UoR"/>
+                                <constraint firstAttribute="width" constant="250" id="7AE-Po-Wjb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -115,9 +126,11 @@
                         <constraint firstAttribute="height" constant="300" id="Adi-Za-RzV"/>
                         <constraint firstAttribute="bottom" secondItem="Mfn-xq-dIa" secondAttribute="bottom" constant="40" id="Dlo-3f-YAm"/>
                         <constraint firstItem="8dc-Rv-Bka" firstAttribute="centerX" secondItem="WW0-Wy-mk5" secondAttribute="centerX" id="Dm9-T5-KWB"/>
+                        <constraint firstItem="dbN-Xq-KAo" firstAttribute="top" secondItem="kY9-bE-VVp" secondAttribute="bottom" constant="7" id="Fzf-Dz-eV0"/>
                         <constraint firstItem="Mfn-xq-dIa" firstAttribute="centerX" secondItem="WW0-Wy-mk5" secondAttribute="centerX" id="Kmj-T8-ahM"/>
                         <constraint firstItem="XF6-2a-pVp" firstAttribute="top" secondItem="WW0-Wy-mk5" secondAttribute="top" constant="12" id="R7z-Di-IQi"/>
                         <constraint firstItem="kY9-bE-VVp" firstAttribute="top" secondItem="8dc-Rv-Bka" secondAttribute="bottom" constant="30" id="nT4-lP-egb"/>
+                        <constraint firstItem="dbN-Xq-KAo" firstAttribute="centerX" secondItem="WW0-Wy-mk5" secondAttribute="centerX" id="rCE-zW-oTE"/>
                         <constraint firstItem="8dc-Rv-Bka" firstAttribute="top" secondItem="WW0-Wy-mk5" secondAttribute="top" constant="30" id="uoX-0N-wWf"/>
                         <constraint firstAttribute="trailing" secondItem="XF6-2a-pVp" secondAttribute="trailing" constant="12" id="y2Q-AQ-ekC"/>
                     </constraints>

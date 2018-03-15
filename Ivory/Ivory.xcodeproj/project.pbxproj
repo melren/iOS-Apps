@@ -33,6 +33,7 @@
 		B8D5B7CE205A29DC00E5D172 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5B7CD205A29DC00E5D172 /* ChannelCell.swift */; };
 		B8D5B7D1205A2E5D00E5D172 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5B7CF205A2E5D00E5D172 /* AddChannelVC.swift */; };
 		B8D5B7D2205A2E5D00E5D172 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D5B7D0205A2E5D00E5D172 /* AddChannelVC.xib */; };
+		B8D5B7D4205A363C00E5D172 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5B7D3205A363C00E5D172 /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		B8D5B7CD205A29DC00E5D172 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		B8D5B7CF205A2E5D00E5D172 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		B8D5B7D0205A2E5D00E5D172 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
+		B8D5B7D3205A363C00E5D172 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		F594CC5C03C888C80DEE3171 /* Pods-Ivory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ivory/Pods-Ivory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				B85D46D62058A0ED007EF118 /* AuthService.swift */,
 				B86FA2DF2059CD9300DFED3E /* UserDataService.swift */,
 				B8D5B7C9205A1EE800E5D172 /* MessageService.swift */,
+				B8D5B7D3205A363C00E5D172 /* SocketService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				B86FA2E02059CD9300DFED3E /* UserDataService.swift in Sources */,
 				B82696AC20587C6000E9AB7D /* RoundedButton.swift in Sources */,
 				B82696B0205883FB00E9AB7D /* LoginVC.swift in Sources */,
+				B8D5B7D4205A363C00E5D172 /* SocketService.swift in Sources */,
 				B826969E20571F3B00E9AB7D /* SWRevealViewController.m in Sources */,
 				B82696AA2058746D00E9AB7D /* Constants.swift in Sources */,
 				B8D5B7D1205A2E5D00E5D172 /* AddChannelVC.swift in Sources */,

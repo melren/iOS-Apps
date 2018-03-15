@@ -14,6 +14,7 @@ class AddChannelVC: UIViewController {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var nameTxt: ColoredPlaceHolderText!
     @IBOutlet weak var chanDesc: ColoredPlaceHolderText!
+    @IBOutlet weak var errorTxt: UILabel!
     
     // Functions
     override func viewDidLoad() {
@@ -42,7 +43,17 @@ class AddChannelVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func createChanPressed(_ sender: Any) {
+        errorTxt.isHidden = true
+        guard let channelName = nameTxt.text, nameTxt.text != "" else {
+            errorTxt.isHidden = false
+            return }
+        guard let channelDesc = chanDesc.text else { return }
         
+        SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDesc) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 
 }

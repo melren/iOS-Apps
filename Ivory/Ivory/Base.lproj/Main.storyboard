@@ -89,6 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="KwP-0X-aak"/>
                     </view>
                     <connections>
+                        <outlet property="channelNameLbl" destination="XZb-5P-7Pr" id="B3B-yI-WIz"/>
                         <outlet property="menuBtn" destination="xGa-dM-fqQ" id="3q7-aZ-g3v"/>
                     </connections>
                 </viewController>
@@ -145,7 +146,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ze-Rx-1MN">
-                                <rect key="frame" x="0.0" y="132" width="315" height="420"/>
+                                <rect key="frame" x="0.0" y="117" width="315" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -190,7 +191,7 @@
                             <constraint firstItem="8ze-Rx-1MN" firstAttribute="leading" secondItem="GqE-U2-7ab" secondAttribute="leading" id="Tei-Z8-NH4"/>
                             <constraint firstItem="GqE-U2-7ab" firstAttribute="trailing" secondItem="8ze-Rx-1MN" secondAttribute="trailing" constant="60" id="VbB-pI-rsD"/>
                             <constraint firstItem="bfA-a2-FVg" firstAttribute="leading" secondItem="GqE-U2-7ab" secondAttribute="leading" constant="12" id="X4c-0C-mIe"/>
-                            <constraint firstItem="8ze-Rx-1MN" firstAttribute="top" secondItem="T3r-yg-OmN" secondAttribute="bottom" constant="20" id="ZUa-Fd-hpz"/>
+                            <constraint firstItem="8ze-Rx-1MN" firstAttribute="top" secondItem="T3r-yg-OmN" secondAttribute="bottom" constant="5" id="ZUa-Fd-hpz"/>
                             <constraint firstItem="Bwk-IM-x2N" firstAttribute="leading" secondItem="GqE-U2-7ab" secondAttribute="leading" constant="12" id="cFR-fq-fgl"/>
                             <constraint firstItem="T3r-yg-OmN" firstAttribute="centerY" secondItem="bfA-a2-FVg" secondAttribute="centerY" id="cPV-7v-0FU"/>
                             <constraint firstItem="Bwk-IM-x2N" firstAttribute="top" secondItem="8ze-Rx-1MN" secondAttribute="bottom" constant="20" id="lPu-eL-YdG"/>
