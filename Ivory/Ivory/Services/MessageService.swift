@@ -17,6 +17,7 @@ class MessageService {
     // Place to store channels
     var channels = [Channel]()
     var selectedChannel : Channel?
+    var unreadChannels = [String]()
     var messages = [Message]()      // Only store for one channel at a time
     
     // Function to retrieve channels

@@ -47,10 +47,39 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
         
         // Load messages in real time from all users & after pressing send
-        SocketService.instance.getChatMessage { (success) in
-            if success {
-                // Show newest message
+        SocketService.instance.getChatMessage { ( newMessage ) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messages.append(newMessage)
                 self.loadNewestMessage()
+            }
+        }
+        
+        SocketService.instance.getTypingUsers { (typingUsers) in
+            // typingUsers is a [String: String]
+            if AuthService.instance.isLoggedIn {
+                guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+                var names = ""
+                var numberOfTypingUsers = 0
+                
+                for (typingUser, channel) in typingUsers {
+                    // Exclude our own name and only care about current channel
+                    if typingUser != UserDataService.instance.name && channel == channelId {
+                        // Parse names
+                        if names == "" {
+                            names = typingUser
+                        } else {
+                            names = "\(names), \(typingUser)"
+                        }
+                        numberOfTypingUsers += 1
+                    }
+                }
+                
+                if numberOfTypingUsers > 0 {
+                    let verb = numberOfTypingUsers > 1 ? "are" : "is"
+                    self.typingUsersLbl.text = "\(names) \(verb) typing a message..."
+                } else {
+                    self.typingUsersLbl.text = ""
+                }
             }
         }
         
@@ -146,12 +175,15 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // Only show send button when there's text in the field and user is logged in
     @IBAction func msgBoxEditing(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
             if messageTxtField.text == "" {
                 isTyping = false
                 sendBtn.isHidden = true
+                SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
             } else {
                 if isTyping == false {
                     sendBtn.isHidden = false
+                    SocketService.instance.socket.emit("startType", UserDataService.instance.name, channelId)
                 }
                 isTyping = true
             }
@@ -166,9 +198,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
                 if success {
+                    self.sendBtn.isHidden = true
                     self.messageTxtField.text = ""
-                    // Dismiss textfield
+                    // Dismiss textfield and emit stopType
                     self.messageTxtField.resignFirstResponder()
+                    SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
+                    
                 }
             })
         }
