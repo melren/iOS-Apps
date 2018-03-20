@@ -34,6 +34,9 @@
 		B8D5B7D1205A2E5D00E5D172 /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5B7CF205A2E5D00E5D172 /* AddChannelVC.swift */; };
 		B8D5B7D2205A2E5D00E5D172 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D5B7D0205A2E5D00E5D172 /* AddChannelVC.xib */; };
 		B8D5B7D4205A363C00E5D172 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5B7D3205A363C00E5D172 /* SocketService.swift */; };
+		B8E28BD220608F2A00BE6441 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E28BD120608F2A00BE6441 /* Message.swift */; };
+		B8E28BD42060A0C500BE6441 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E28BD32060A0C500BE6441 /* KeyboardBoundView.swift */; };
+		B8E28BD62060A4EB00BE6441 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E28BD52060A4EB00BE6441 /* MessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		B8D5B7CF205A2E5D00E5D172 /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		B8D5B7D0205A2E5D00E5D172 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		B8D5B7D3205A363C00E5D172 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		B8E28BD120608F2A00BE6441 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B8E28BD32060A0C500BE6441 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		B8E28BD52060A4EB00BE6441 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		F594CC5C03C888C80DEE3171 /* Pods-Ivory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ivory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ivory/Pods-Ivory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,12 +134,14 @@
 		B82696A02057402A00E9AB7D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B8E28BD32060A0C500BE6441 /* KeyboardBoundView.swift */,
 				B82696A62058658600E9AB7D /* GradientView.swift */,
 				B82696AB20587C6000E9AB7D /* RoundedButton.swift */,
 				B82696AD2058805100E9AB7D /* ColoredPlaceHolderText.swift */,
 				B86FA2E32059D76F00DFED3E /* AvatarCell.swift */,
 				B86FA2E52059E42B00DFED3E /* CircleImage.swift */,
 				B8D5B7CD205A29DC00E5D172 /* ChannelCell.swift */,
+				B8E28BD52060A4EB00BE6441 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B8D5B7CB205A1F4B00E5D172 /* Channel.swift */,
+				B8E28BD120608F2A00BE6441 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -351,6 +360,7 @@
 			files = (
 				B82696A52057406400E9AB7D /* ChannelVC.swift in Sources */,
 				B85D46D4205891EC007EF118 /* CreateAcctVC.swift in Sources */,
+				B8E28BD42060A0C500BE6441 /* KeyboardBoundView.swift in Sources */,
 				B86FA2E42059D76F00DFED3E /* AvatarCell.swift in Sources */,
 				B8D5B7C62059F59C00E5D172 /* ProfileViewVC.swift in Sources */,
 				B82696A32057405800E9AB7D /* ChatVC.swift in Sources */,
@@ -365,7 +375,9 @@
 				B82696B0205883FB00E9AB7D /* LoginVC.swift in Sources */,
 				B8D5B7D4205A363C00E5D172 /* SocketService.swift in Sources */,
 				B826969E20571F3B00E9AB7D /* SWRevealViewController.m in Sources */,
+				B8E28BD62060A4EB00BE6441 /* MessageCell.swift in Sources */,
 				B82696AA2058746D00E9AB7D /* Constants.swift in Sources */,
+				B8E28BD220608F2A00BE6441 /* Message.swift in Sources */,
 				B8D5B7D1205A2E5D00E5D172 /* AddChannelVC.swift in Sources */,
 				B82696AE2058805100E9AB7D /* ColoredPlaceHolderText.swift in Sources */,
 				B86FA2E22059D53D00DFED3E /* AvatarPickerVC.swift in Sources */,
