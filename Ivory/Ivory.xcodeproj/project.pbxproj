@@ -26,6 +26,7 @@
 		B873386B2057181100BB5696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87338692057181100BB5696 /* Main.storyboard */; };
 		B873386D2057181100BB5696 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B873386C2057181100BB5696 /* Assets.xcassets */; };
 		B87338702057181100BB5696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B873386E2057181100BB5696 /* LaunchScreen.storyboard */; };
+		B8A74D8C2061F69400B0FECF /* ChatInputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A74D8B2061F69400B0FECF /* ChatInputText.swift */; };
 		B8D5B7C62059F59C00E5D172 /* ProfileViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5B7C42059F59C00E5D172 /* ProfileViewVC.swift */; };
 		B8D5B7C72059F59C00E5D172 /* ProfileViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8D5B7C52059F59C00E5D172 /* ProfileViewVC.xib */; };
 		B8D5B7CA205A1EE800E5D172 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D5B7C9205A1EE800E5D172 /* MessageService.swift */; };
@@ -64,6 +65,7 @@
 		B873386C2057181100BB5696 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B873386F2057181100BB5696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B87338712057181100BB5696 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8A74D8B2061F69400B0FECF /* ChatInputText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputText.swift; sourceTree = "<group>"; };
 		B8D5B7C42059F59C00E5D172 /* ProfileViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewVC.swift; sourceTree = "<group>"; };
 		B8D5B7C52059F59C00E5D172 /* ProfileViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewVC.xib; sourceTree = "<group>"; };
 		B8D5B7C9205A1EE800E5D172 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				B86FA2E52059E42B00DFED3E /* CircleImage.swift */,
 				B8D5B7CD205A29DC00E5D172 /* ChannelCell.swift */,
 				B8E28BD52060A4EB00BE6441 /* MessageCell.swift */,
+				B8A74D8B2061F69400B0FECF /* ChatInputText.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				B8D5B7C62059F59C00E5D172 /* ProfileViewVC.swift in Sources */,
 				B82696A32057405800E9AB7D /* ChatVC.swift in Sources */,
 				B82696A72058658600E9AB7D /* GradientView.swift in Sources */,
+				B8A74D8C2061F69400B0FECF /* ChatInputText.swift in Sources */,
 				B8D5B7CA205A1EE800E5D172 /* MessageService.swift in Sources */,
 				B8D5B7CC205A1F4B00E5D172 /* Channel.swift in Sources */,
 				B87338662057181100BB5696 /* AppDelegate.swift in Sources */,

@@ -79,16 +79,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="line" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9p-hF-Zxm" customClass="ColoredPlaceHolderText" customModule="Ivory" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Message:" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Q9p-hF-Zxm" customClass="ChatInputText" customModule="Ivory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="jl0-9a-UYn"/>
                                 </constraints>
                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="msgBoxEditing:" destination="EYo-h5-Vch" eventType="editingChanged" id="ISv-0q-I7v"/>
+                                    <action selector="chatBoxEditing:" destination="EYo-h5-Vch" eventType="editingChanged" id="S91-bR-VtZ"/>
                                 </connections>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IN-ft-QpC">
@@ -124,7 +124,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sharky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaI-oe-5ed">
                                                     <rect key="frame" x="70" y="8" width="54" height="24"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                                    <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" red="0.40914750100000002" green="0.57732951639999996" blue="0.75195795300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Message here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqi-da-p4r">
@@ -134,7 +134,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="12:33 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhR-ay-4br">
-                                                    <rect key="frame" x="130" y="10" width="60" height="20"/>
+                                                    <rect key="frame" x="303" y="10" width="60" height="20"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                     <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -145,10 +145,10 @@
                                                 <constraint firstItem="qqi-da-p4r" firstAttribute="top" secondItem="vaI-oe-5ed" secondAttribute="bottom" constant="4" id="8Ok-gy-Eh1"/>
                                                 <constraint firstItem="NhR-ay-4br" firstAttribute="centerY" secondItem="vaI-oe-5ed" secondAttribute="centerY" id="ChC-zp-aZD"/>
                                                 <constraint firstItem="vaI-oe-5ed" firstAttribute="leading" secondItem="PMY-No-wmN" secondAttribute="trailing" constant="12" id="KpW-ei-Ira"/>
-                                                <constraint firstItem="NhR-ay-4br" firstAttribute="leading" secondItem="vaI-oe-5ed" secondAttribute="trailing" constant="6" id="UWS-kl-Tcp"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="qqi-da-p4r" secondAttribute="bottom" constant="15" id="WoA-3F-zUB"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="qqi-da-p4r" secondAttribute="trailing" constant="12" id="YWh-Ia-8qK"/>
                                                 <constraint firstItem="PMY-No-wmN" firstAttribute="top" secondItem="Qg6-MO-2pM" secondAttribute="top" constant="8" id="Z4B-qt-KNp"/>
+                                                <constraint firstAttribute="trailing" secondItem="NhR-ay-4br" secondAttribute="trailing" constant="12" id="h39-aS-BaJ"/>
                                                 <constraint firstItem="qqi-da-p4r" firstAttribute="leading" secondItem="PMY-No-wmN" secondAttribute="trailing" constant="12" id="puD-rP-4Se"/>
                                                 <constraint firstItem="vaI-oe-5ed" firstAttribute="top" secondItem="PMY-No-wmN" secondAttribute="top" id="zdM-dE-Wx5"/>
                                             </constraints>
@@ -162,8 +162,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHG-5s-9yC">
-                                <rect key="frame" x="8" y="622" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHG-5s-9yC">
+                                <rect key="frame" x="5" y="597" width="365" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="4CW-Ta-92q"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <color key="textColor" red="0.40914750100000002" green="0.57732951639999996" blue="0.75195795300000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -179,11 +182,12 @@
                             <constraint firstItem="KwP-0X-aak" firstAttribute="trailing" secondItem="4IN-ft-QpC" secondAttribute="trailing" constant="8" id="BY7-FL-AC8"/>
                             <constraint firstItem="aBZ-Dp-V3F" firstAttribute="top" secondItem="dGf-up-t4Z" secondAttribute="bottom" id="Di6-9f-v1I"/>
                             <constraint firstItem="Q9p-hF-Zxm" firstAttribute="leading" secondItem="KwP-0X-aak" secondAttribute="leading" id="EHr-ya-rUt"/>
+                            <constraint firstItem="gHG-5s-9yC" firstAttribute="leading" secondItem="kJL-18-5CX" secondAttribute="leading" constant="5" id="KAH-Pq-bmr"/>
+                            <constraint firstAttribute="trailing" secondItem="gHG-5s-9yC" secondAttribute="trailing" constant="5" id="MA2-Yy-0Io"/>
                             <constraint firstItem="dGf-up-t4Z" firstAttribute="top" secondItem="kJL-18-5CX" secondAttribute="top" id="MFe-cy-FEU"/>
                             <constraint firstItem="Q9p-hF-Zxm" firstAttribute="top" secondItem="gHG-5s-9yC" secondAttribute="bottom" constant="5" id="X95-jU-JrG"/>
                             <constraint firstItem="KwP-0X-aak" firstAttribute="trailing" secondItem="Q9p-hF-Zxm" secondAttribute="trailing" id="Y9g-w0-t9b"/>
                             <constraint firstItem="dGf-up-t4Z" firstAttribute="leading" secondItem="KwP-0X-aak" secondAttribute="leading" id="bqZ-Q2-bs1"/>
-                            <constraint firstItem="gHG-5s-9yC" firstAttribute="leading" secondItem="KwP-0X-aak" secondAttribute="leading" constant="8" id="qV8-dU-uhf"/>
                             <constraint firstItem="dGf-up-t4Z" firstAttribute="trailing" secondItem="KwP-0X-aak" secondAttribute="trailing" id="vUa-lh-vWY"/>
                             <constraint firstItem="aBZ-Dp-V3F" firstAttribute="leading" secondItem="KwP-0X-aak" secondAttribute="leading" id="we9-ob-6dQ"/>
                         </constraints>
@@ -191,8 +195,8 @@
                     </view>
                     <connections>
                         <outlet property="channelNameLbl" destination="XZb-5P-7Pr" id="B3B-yI-WIz"/>
+                        <outlet property="chatTxtField" destination="Q9p-hF-Zxm" id="eEN-SV-RZv"/>
                         <outlet property="menuBtn" destination="xGa-dM-fqQ" id="3q7-aZ-g3v"/>
-                        <outlet property="messageTxtField" destination="Q9p-hF-Zxm" id="w7m-bg-Laa"/>
                         <outlet property="sendBtn" destination="4IN-ft-QpC" id="pRL-bq-lXx"/>
                         <outlet property="tableView" destination="aBZ-Dp-V3F" id="nu7-8j-kSX"/>
                         <outlet property="typingUsersLbl" destination="gHG-5s-9yC" id="XKs-uS-sMv"/>
@@ -373,7 +377,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lal-Hs-SII">
                                         <rect key="frame" x="0.0" y="27" width="250" height="2"/>
@@ -390,7 +394,7 @@
                                         </constraints>
                                         <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6B-zA-v71">
                                         <rect key="frame" x="0.0" y="66" width="250" height="2"/>
@@ -524,14 +528,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m5u-US-HiA">
                                 <rect key="frame" x="62.5" y="140.5" width="250" height="107"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBL-ga-MJq" customClass="ColoredPlaceHolderText" customModule="Ivory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="17"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="display name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JBL-ga-MJq" customClass="ColoredPlaceHolderText" customModule="Ivory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="17"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="9ow-gX-3GR"/>
+                                            <constraint firstAttribute="width" constant="250" id="1oH-fA-DC0"/>
                                         </constraints>
                                         <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2a-7h-TlK">
                                         <rect key="frame" x="0.0" y="27" width="250" height="2"/>
@@ -542,13 +546,13 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E7M-GK-fvG" customClass="ColoredPlaceHolderText" customModule="Ivory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="39" width="150" height="17"/>
+                                        <rect key="frame" x="0.0" y="39" width="250" height="17"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="I7m-PV-awn"/>
+                                            <constraint firstAttribute="width" constant="250" id="I2f-AM-wi2"/>
                                         </constraints>
                                         <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8qs-Ut-eRI">
                                         <rect key="frame" x="0.0" y="66" width="250" height="2"/>
@@ -559,13 +563,13 @@
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHO-NY-RlO" customClass="ColoredPlaceHolderText" customModule="Ivory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="78" width="150" height="17"/>
+                                        <rect key="frame" x="0.0" y="78" width="250" height="17"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="Lg8-uA-UuW"/>
+                                            <constraint firstAttribute="width" constant="250" id="Zoc-e3-DEn"/>
                                         </constraints>
                                         <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbC-ko-lGy">
                                         <rect key="frame" x="0.0" y="105" width="250" height="2"/>

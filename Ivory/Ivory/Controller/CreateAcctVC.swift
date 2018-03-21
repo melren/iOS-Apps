@@ -65,6 +65,12 @@ class CreateAcctVC: UIViewController {
             displayError()
             return
         }
+        if username.count > 7 {
+            self.errorTxt.text = "Display name cannot exceed 7 characters."
+            errorTxt.isHidden = false
+            spinner.stopAnimating()
+            return
+        }
         guard let email = emailTxt.text , emailTxt.text != "" else {
             displayError()
             return

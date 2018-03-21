@@ -46,7 +46,13 @@ class AddChannelVC: UIViewController {
         errorTxt.isHidden = true
         guard let channelName = nameTxt.text, nameTxt.text != "" else {
             errorTxt.isHidden = false
-            return }
+            return
+        }
+        if channelName.count > 12 {
+            self.errorTxt.text = "Channel name cannot exceed 12 characters."
+            errorTxt.isHidden = false
+            return
+        }
         guard let channelDesc = chanDesc.text else { return }
         
         SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDesc) { (success) in

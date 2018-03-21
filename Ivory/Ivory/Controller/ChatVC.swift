@@ -13,7 +13,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // Outlets
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
-    @IBOutlet weak var messageTxtField: ColoredPlaceHolderText!
+    @IBOutlet weak var chatTxtField: ChatInputText!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var typingUsersLbl: UILabel!
@@ -85,10 +85,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // Initial loading
         if AuthService.instance.isLoggedIn {
+            chatTxtField.isUserInteractionEnabled = true
             AuthService.instance.findUserByEmail(completion: { (success) in
                 NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
             })
         } else {
+            chatTxtField.isUserInteractionEnabled = false
             channelNameLbl.text = "Please Login"
         }
         
@@ -105,10 +107,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @objc func userDataDidChange(_ notif: Notification) {
         if AuthService.instance.isLoggedIn {
             // Get channels
+            chatTxtField.isUserInteractionEnabled = true
             onLoginGetMessages()
             updateWithChannel()
         } else {
+            chatTxtField.isUserInteractionEnabled = false
             channelNameLbl.text = "Please Login"
+            typingUsersLbl.text = ""
             tableView.reloadData()
         }
     }
@@ -173,10 +178,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // Actions
     
     // Only show send button when there's text in the field and user is logged in
-    @IBAction func msgBoxEditing(_ sender: Any) {
+    
+    @IBAction func chatBoxEditing(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
-            if messageTxtField.text == "" {
+            if chatTxtField.text == "" {
                 isTyping = false
                 sendBtn.isHidden = true
                 SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
@@ -194,14 +200,14 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if AuthService.instance.isLoggedIn {
             // If logged in, get channel ID and send the text
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
-            guard let message = messageTxtField.text else { return }
+            guard let message = chatTxtField.text else { return }
             
             SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
                 if success {
                     self.sendBtn.isHidden = true
-                    self.messageTxtField.text = ""
+                    self.chatTxtField.text = ""
                     // Dismiss textfield and emit stopType
-                    self.messageTxtField.resignFirstResponder()
+                    self.chatTxtField.resignFirstResponder()
                     SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
                     
                 }
